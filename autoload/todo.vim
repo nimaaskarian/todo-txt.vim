@@ -128,7 +128,6 @@ function! todo#Sort()
     silent! %s/\(x\s*\d\{4}\)-\(\d\{2}\)-\(\d\{2}\)/\1\2\3/g
     sort n /^x\s*/
     silent! %s/\(x\s*\d\{4}\)\(\d\{2}\)/\1-\2-/g
-    endif
 endfunction
 
 function! todo#SortDue()
