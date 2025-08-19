@@ -44,8 +44,8 @@ if !exists("g:Todo_txt_do_not_map")
     noremap <script> <silent> <buffer> <localleader>d :call todo#PrependDate()<CR>
 
 " Mark done {{{2
-    noremap <script> <silent> <buffer> <localleader>x :call todo#ToggleMarkAsDone('')<CR>
-    noremap <script> <silent> <buffer> <localleader><space> :call todo#ToggleMarkAsDone('')<CR>
+    noremap <script> <silent> <buffer> <localleader>x :call todo#ToggleMarkAsDoneAndSort('')<CR>
+    noremap <script> <silent> <buffer> <localleader><space> :call todo#ToggleMarkAsDoneAndSort('')<CR>
 
 " Mark done {{{2
     noremap <script> <silent> <buffer> <localleader>C :call todo#ToggleMarkAsDone('Cancelled')<CR>

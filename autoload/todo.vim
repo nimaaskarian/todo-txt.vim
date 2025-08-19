@@ -58,6 +58,11 @@ function! todo#PrependDate()
     normal! 0"=strftime("%Y-%m-%d ")P
 endfunction
 
+function! todo#ToggleMarkAsDoneAndSort(status)
+  :call todo#ToggleMarkAsDone(a:status)
+  :call todo#Sort()
+endfunction
+
 function! todo#ToggleMarkAsDone(status)
     if (getline(".") =~ 'x\s*\d\{4\}')
         :call todo#UnMarkAsDone(a:status)
