@@ -125,9 +125,11 @@ endfunction
 function! todo#Sort()
     " vim :sort is usually stable
     " we sort first on contexts, then on projects and then on priority
+    let l:position= getpos(".")
     silent! %s/\(x\s*\d\{4}\)-\(\d\{2}\)-\(\d\{2}\)/\1\2\3/g
     sort n /^x\s*/
     silent! %s/\(x\s*\d\{4}\)\(\d\{2}\)/\1-\2-/g
+    call setpos('.', position)
 endfunction
 
 function! todo#SortDue()
