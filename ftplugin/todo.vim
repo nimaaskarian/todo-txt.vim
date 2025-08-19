@@ -41,15 +41,11 @@ if !exists("g:Todo_txt_do_not_map")
     noremap <script> <silent> <buffer> <LocalLeader>c :call todo#PrioritizeAdd('C')<CR>
 
 " Insert date {{{2
-    inoremap <script> <silent> <buffer> date<Tab> <C-R>=strftime("%Y-%m-%d")<CR>
-
-    inoremap <script> <silent> <buffer> due: due:<C-R>=strftime("%Y-%m-%d")<CR>
-    inoremap <script> <silent> <buffer> DUE: DUE:<C-R>=strftime("%Y-%m-%d")<CR>
-
     noremap <script> <silent> <buffer> <localleader>d :call todo#PrependDate()<CR>
 
 " Mark done {{{2
     noremap <script> <silent> <buffer> <localleader>x :call todo#ToggleMarkAsDone('')<CR>
+    noremap <script> <silent> <buffer> <localleader><space> :call todo#ToggleMarkAsDone('')<CR>
 
 " Mark done {{{2
     noremap <script> <silent> <buffer> <localleader>C :call todo#ToggleMarkAsDone('Cancelled')<CR>
