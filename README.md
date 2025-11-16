@@ -77,22 +77,38 @@ functionalities including:
 
 ### Installation
 
+#### Lazy.nvim
+
+add the following lines to the list of your plugins.
+
+```lua
+ { 
+    "nimaaskarian/todo-txt.vim",
+    event = {
+      "BufNewFile \\(todo\\|done\\)*.txt",
+      "BufReadPre \\(todo\\|done\\)*.txt",
+      "BufReadPre *.\\(todo\\|done\\)*.txt",
+      "BufNewFile *.\\(todo\\|done\\)*.txt",
+    },
+  },
+```
+
 #### Vizardry
 
 If you have [Vizardry](https://github.com/dbeniamine/vizardry) installed,
 you can run from vim:
 
-    :Invoke -u dbeniamine todo.txt-vim
+    :Invoke -u nimaaskarian todo.txt-vim
 
 #### Pathogen install
 
-    git clone https://github.com/dbeniamine/todo.txt-vim.git ~/.vim/bundle/todo.txt-vim
+    git clone https://github.com/nimaaskarian/todo.txt-vim.git ~/.vim/bundle/todo.txt-vim
 
 Then from vim: `:Helptags` to update the doc
 
 #### Quick install
 
-        git clone https://github.com/dbeniamine/todo.txt-vim.git
+        git clone https://github.com/nimaaskarian/todo.txt-vim.git
         cd todo.txt-vim
         cp -r ./* ~/.vim
 
